@@ -137,6 +137,9 @@ nvm alias default "${NODE_VERSION}"
 echo "=== Installation de Yarn global ==="
 npm install -g yarn
 
+echo "=== Installation de tailscale ==="
+curl -fsSL https://tailscale.com/install.sh | sh
+
 echo "========================================"
 echo " Installation terminée 🎉"
 echo " Déconnecte/reconnecte ta session (ou reboot)"
