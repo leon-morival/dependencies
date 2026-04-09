@@ -118,7 +118,15 @@ sudo apt install -y openjdk-17-jdk android-tools-adb android-tools-fastboot
 
 echo "=== Installation Android Studio (snap) ==="
 sudo snap install android-studio --classic
-
+#######################################
+# gcloud et firebase
+#######################################
+curl -sL https://firebase.tools | bash
+sudo apt-get update -y
+sudo apt-get install -y ca-certificates gnupg curl
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+sudo apt-get update -y && sudo apt-get install -y google-cloud-cli
 #######################################
 # NVM + Node + Yarn
 #######################################
